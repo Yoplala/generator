@@ -32,7 +32,7 @@ let sciFi1 = [
 	"Au fin fond de l'espace se trouvait une martienne intrépide."
 	];
 let sciFi2 = [
-	"Son vaisseau spatial fut attaqué et s'échoua sur une planête désserte.",
+	"Son vaisseau spatial fut attaqué et s'échoua sur une planête déserte.",
 	"Son vaisseau spatial subit des avaries et dû être posé en urgence sur un astéroïde.",
 	"Son vaisseau spatial fut détruit lors d'un combat épique.",
 	"Son vaisseau spatial était décoré des cadavres de ses ennemis.",
@@ -110,6 +110,17 @@ function generateStories(genreStory) {
   }
 }
 
+
+document.onmousemove = suitsouris;
+function suitsouris(MouseEvent)
+    {
+        let x =  MouseEvent.pageX;
+        let y =  MouseEvent.pageY;
+		document.getElementById("bulle").style.left = (x+1)+'px';
+		document.getElementById("bulle").style.top = (y+1)+'px';
+    }
+	
+	
    /*
   if (genreStory === "1") {
 	  console.log("Fantastique");
