@@ -3,7 +3,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: orange;
+	background: #FF8E06;
 	padding: 3px 10px;
 	font-size: 1em;
 	color: white;
@@ -22,7 +22,7 @@
 	margin-left: -6px;
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
-	border-top: 6px solid orange;
+	border-top: 6px solid #FF8E06;
 }
 
 .tooltip.visible {
