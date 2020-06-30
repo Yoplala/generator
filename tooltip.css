@@ -5,8 +5,9 @@
 	left: 0;
 	background: #FF8E06;
 	padding: 3px 10px;
-	font-size: 1em;
-	color: white;
+	font-size: 1.2em;
+	color: black;
+	font-family: '2Dumb';
 	border-radius: 50px;
 	opacity: 0;
 	transform: translateY(30px);
