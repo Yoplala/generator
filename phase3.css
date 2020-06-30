@@ -108,6 +108,7 @@ h2 {
 	color: var(--main-color);
 	margin: auto;
 	padding: 2%;
+	border: 5px solid var(--second-color);
 	border-radius: 40px;
 	background-color: white;
 	min-height: 30px;
