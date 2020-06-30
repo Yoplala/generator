@@ -4,13 +4,29 @@
   --thirst-color: white;
 }
 
+
+@font-face {
+    font-family: 'ThatNogoFontCasual';
+    src: url('fonts/ThatNogoFontCasual.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: '3Dumb';
+    src: url('fonts/3Dumb.ttf') format('truetype');
+}		 
+
+@font-face {
+    font-family: '2Dumb';
+    src: url('fonts/2Dumb.ttf') format('truetype');
+}	
+
+ 
 body {
 	background-color: var(--main-color);
 	color : var(--thirst-color);
 	text-align : center;
 	width: 60%;
 	margin: auto;
-	font-family: Arial Black;
 }
 
 section {
@@ -18,12 +34,14 @@ section {
 }
 
 h1 {
-	width: 700px;
+	font-family: '3Dumb';
+	width: 900px;
 	margin: 5% auto;
 	font-size: 50px;
 	background-color: var(--second-color);
 	border-radius: 50px;
 	padding: 2%;
+	text-transform: uppercase;
 }
 /* -----===== XXX ======----- */
 
@@ -102,6 +120,7 @@ button img {
 /* -----===== XXX ======----- */
 
 h2 {
+	font-family: '3Dumb';
 	color: var(--second-color);
 }
 #storiesArea {
@@ -116,5 +135,20 @@ h2 {
 	font-weight: bold;
 	font-size: 1em;
 	text-align: left;
+}
+
+#bulle {
+	height: 20px;
+	width: 20px;
+	border-radius: 50px;
+	background-color: var(--second-color);
+	position: absolute;
+	z-index: 10;
+	animation: bounce 0.35s ease infinite alternate;
+}
+
+@keyframes bounce{
+     from {transform: translateY(0);}
+     to   {transform: translateY(-20px);}
 }
 
