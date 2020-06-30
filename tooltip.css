@@ -1,0 +1,31 @@
+
+.tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: orange;
+	padding: 3px 10px;
+	font-size: 1em;
+	color: white;
+	border-radius: 50px;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 500ms ease-in-out,
+				transform 500ms ease-in-out;
+}
+
+.tooltip::after {
+	content:'';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -6px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid orange;
+}
+
+.tooltip.visible {
+	opacity: 1;
+	transform: translateY(0px);
+}
