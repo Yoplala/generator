@@ -1,3 +1,18 @@
+
+/* -----===== Animation de la souris =====----- */
+
+document.onmousemove = bulleSouris;
+function bulleSouris(MouseEvent)
+    {
+        let x =  MouseEvent.pageX;
+        let y =  MouseEvent.pageY;
+		document.getElementById("bulle").style.left = (x+1)+'px';
+		document.getElementById("bulle").style.top = (y+1)+'px';
+    }
+
+
+/* -----===== Génération des histoires =====----- */
+
 let fantasy1 = [ 
 	"Il était une fois un preux chevalier,",
 	"Il était une fois un jeune prince un peu simplet,",
@@ -46,39 +61,17 @@ let sciFi3 = [
 	"Après sa rencontre avec le troisième type, plus rien ne lui faisait peur."
 	];
 
-
+// Fonction pour récupérer un élément au hasard dans un des tableaux
 function randomFromArray(array) {
 	return Math.floor(Math.random() * array.length);
 }			
 
 
-let numberStories; 	
+let numberStories;
 let genreStory; 	
 let zoneElement = document.getElementById("stories");
 
-let choixNombre1 = document.getElementById("choix1");
-choixNombre1.addEventListener("input", (e) => {
-	numberStories = 1;
-});
-let choixNombre2 = document.getElementById("choix2");
-choixNombre2.addEventListener("input", (e) => {
-	numberStories = 2;
-});
-let choixNombre3 = document.getElementById("choix3");
-choixNombre3.addEventListener("input", (e) => {
-	numberStories = 3;
-});
-let choixNombre4 = document.getElementById("choix4");
-choixNombre4.addEventListener("input", (e) => {
-	numberStories = 4;
-});
-let choixNombre5 = document.getElementById("choix5");
-choixNombre5.addEventListener("input", (e) => {
-	numberStories = 5;
-});
-
-
-
+// Choix d'un style d'histoire et lancement de la fonction
 let choixScifi = document.getElementById("scifi");
 choixScifi.addEventListener("click", (e) => {
 	generateStories(2);
@@ -89,67 +82,28 @@ choixFantasy.addEventListener("click", (e) => {
 	generateStories(1);
 });
 
+// Fonction de génération
+function generateStories(genreStory) { 
+	let choixNombre = document.getElementsByName('choix');
+		for(let i = 0; i < choixNombre.length; i++){
+			if(choixNombre[i].checked){
+				numberStories = Number(choixNombre[i].value);
+			}
+		}
+	if (genreStory === 1) {
+		zoneElement.innerHTML = "";
+		for (let j = 0; j < numberStories; j++) {
+			let newStory = document.createElement("p");
+			newStory.textContent = (fantasy1[randomFromArray(fantasy1)] + " " + fantasy2[randomFromArray(fantasy2)] + " " + fantasy3[randomFromArray(fantasy3)]);
+			zoneElement.appendChild(newStory);
+		}
 
-function generateStories(genreStory) {  
-  if (genreStory === 1) {
-	  zoneElement.innerHTML = "";
-	  for (i = 0; i < numberStories; i++) {
-		 
-          let newStory = document.createElement("p");
-		  newStory.textContent = (fantasy1[randomFromArray(fantasy1)] + " " + fantasy2[randomFromArray(fantasy2)] + " " + fantasy3[randomFromArray(fantasy3)]);
-		  zoneElement.appendChild(newStory);
-      }
-
-  } else if (genreStory === 2) {
-	  zoneElement.innerHTML = "";
-	   for (let i = 0; i < numberStories; i++) {
-		  let newStory = document.createElement("p");
-          newStory.textContent = (sciFi1[randomFromArray(sciFi1)] + " " + sciFi2[randomFromArray(sciFi2)] + " " + sciFi3[randomFromArray(sciFi3)]);
-		  zoneElement.appendChild(newStory);
-      }
-  }
+	} else if (genreStory === 2) {
+		zoneElement.innerHTML = "";
+		for (let j = 0; j < numberStories; j++) {
+			let newStory = document.createElement("p");
+			newStory.textContent = (sciFi1[randomFromArray(sciFi1)] + " " + sciFi2[randomFromArray(sciFi2)] + " " + sciFi3[randomFromArray(sciFi3)]);
+			zoneElement.appendChild(newStory);
+		}
+	}
 }
-
-
-document.onmousemove = suitsouris;
-function suitsouris(MouseEvent)
-    {
-        let x =  MouseEvent.pageX;
-        let y =  MouseEvent.pageY;
-		document.getElementById("bulle").style.left = (x+1)+'px';
-		document.getElementById("bulle").style.top = (y+1)+'px';
-    }
-	
-	
-   /*
-  if (genreStory === "1") {
-	  console.log("Fantastique");
-	  
-   
-  } else if (genreStory === "2") {
-	  console.log("Science-fiction");
-     
-  }
-  
-}*/
-
-	/*else if (choix === "jeunes"){
-		zoneRecits.innerHTML = "";
-		for (i = 0; i < nbRecits; i++) {
-			let newP = document.createElement("p");
-			newP.textContent = creerPhrase(syntagmesParques);
-			zoneRecits.appendChild(newP);
-		}/*
-
-/*let startAgain;
-
-do {
-generateStories();
-startAgain = prompt("As-tu aimé les histoires ? En veux-tu d'autres ? \n Tape Oui ou Non !");
-
-} while (startAgain === "Oui");
-let bye = document.createElement("p");
-          bye.textContent = ("Au revoir !");
-		  zoneElement.appendChild(bye);*/
-
-
