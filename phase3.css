@@ -1,3 +1,6 @@
+
+/* -----===== Général ======----- */
+
 :root {
   --main-color: black;
   --second-color: #FF8E06;
@@ -43,7 +46,9 @@ h1 {
 	padding: 2%;
 	text-transform: uppercase;
 }
-/* -----===== XXX ======----- */
+
+
+/* -----===== Section choix du nombre ======----- */
 
 #choixNombre {
 	color: var(--thirst-color);
@@ -57,14 +62,10 @@ input {
 	cursor: pointer;
 	background-color: var(--second-color);
 	border: 2px solid grey;
-	/*transition: background-color 500ms ease-in-out;*/
 }
 	input:checked {
 		box-shadow: 0 0 0 3px var(--second-color);
 	}
-	/*input:focus {
-			background-color: purple;
-		}*/
 
 label {
 	margin-right: 10px;
@@ -77,7 +78,7 @@ label {
 
 
 
-/* -----===== XXX ======----- */
+/* -----===== Section choix du style ======----- */
 
 #choixStyle {
 	display: flex;
@@ -113,11 +114,11 @@ button img {
 }
 
 #styleHistoire {
-	width: 200px;
+	width: 300px;
 	height: 100px;
 }
 
-/* -----===== XXX ======----- */
+/* -----===== Section Vos histoires ======----- */
 
 h2 {
 	font-family: '3Dumb';
@@ -136,6 +137,8 @@ h2 {
 	font-size: 1em;
 	text-align: left;
 }
+
+/* -----===== Animation de la souris =====----- */
 
 #bulle {
 	height: 20px;
