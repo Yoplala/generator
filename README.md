@@ -19,5 +19,4 @@ Livrables : Code JavaScript du projet
 
 
 ## Pistes d'amélioration
-
-
+- Adaptibilité
