@@ -23,7 +23,7 @@
     src: url('fonts/2Dumb.ttf') format('truetype');
 }	
 
- 
+
 body {
 	background-color: var(--main-color);
 	color : var(--thirst-color);
@@ -32,18 +32,6 @@ body {
 	margin: auto;
 }
 
-	@media all and (max-device-width: 800px) {
-		body {
-			width: 70%;
-		}
-	}
-
-	@media all and (max-device-width: 480px) {
-		body {
-			width: 80%;
-		}
-	}
-
 section {
 	margin-top: 5%;
 }
@@ -51,7 +39,7 @@ section {
 h1 {
 	font-family: '3Dumb';
 	margin: 5% auto;
-	font-size: 50px;
+	font-size: 3rem;
 	background-color: var(--second-color);
 	border-radius: 50px;
 	padding: 2%;
@@ -66,7 +54,7 @@ h1 {
 }
 
 #choisirNombre {
-	font-size: 20px;
+	font-size: 2rem;
 }
 
 input {
@@ -94,7 +82,11 @@ label {
 #choixStyle {
 	display: flex;
 	justify-content: space-around;
-	font-size: 20px;
+	font-size: 2rem;
+}
+
+#styleHistoireMobile {
+	display: none;
 }
 
 button {
@@ -125,7 +117,7 @@ button img {
 }
 
 #styleHistoire {
-	width: 300px;
+	width: 500px;
 	height: 100px;
 }
 
@@ -145,7 +137,7 @@ h2 {
 	min-height: 30px;
 	height: auto;
 	font-weight: bold;
-	font-size: 1em;
+	font-size: 1rem;
 	text-align: left;
 }
 
@@ -166,3 +158,78 @@ h2 {
      to   {transform: translateY(-20px);}
 }
 
+/* -----===== Adaptabilité =====----- */
+
+	@media all and (max-device-width: 800px) {
+		body {
+			width: 70%;
+		}
+		#styleHistoire {
+			display: none;
+		}
+		#styleHistoireMobile {
+			display: inline;
+			font-size: 2rem;
+			margin: 5%;
+		}
+		#choixStyle {
+			margin: 5%;
+		}
+		h2 {
+			font-size: 3rem;
+		}
+	}
+
+	@media all and (max-device-width: 480px) {
+		body {
+			width: 80%;
+		}
+		h1 {
+			font-size: 6rem;
+		}
+		#choisirNombre {
+			font-size: 4rem;
+		}
+		#choixNombre {
+			margin-bottom: 10%;
+		}
+		#styleHistoire {
+			display: none;
+		}
+		#styleHistoireMobile {
+			display: inline;
+			font-size: 4rem;
+			margin: 10%;
+		}
+		#choixStyle {
+			margin: 5%;
+		}
+		#storiesArea {
+			min-height: 60px;
+		}
+		h2 {
+			font-size: 4rem;
+		}
+		button {
+			width: 220px;
+			height: 220px;
+			margin-top: 10%;
+			margin-bottom: 10%;
+		}
+		button img {
+			width: 200px;
+			height: 200px;
+		}
+		#storiesArea {
+			font-size: 3rem;
+		}
+		input {
+			width: 50px;
+			height: 50px;
+			font-size: 3rem;
+		}
+		label {
+			font-size: 3rem;
+			cursor: pointer;
+		}
+	}
