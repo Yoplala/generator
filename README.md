@@ -1,7 +1,7 @@
 # generator
 Quote Generator | Générateur de citations
 
-https://yoplala.github.io/generator/
+[Générateur d'histoires](https://yoplala.github.io/generator/)
 
 ## Contexte
 
